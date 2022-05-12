@@ -1,0 +1,21 @@
+Explain as you would to a co-worker what the open-closed principle means.
+
+Answer:
+In the SOLID principles, the open-closed principle deals with classes, functions, 
+modules, etc. Essentially, the open-closed principle means that once you write a 
+class you should not have to alter it again even when you want to add something new
+to it. If you think of a class it usually has attributes and/or methods
+that relate to that class, for example consider a Student class. The student class
+might need some information like the student name and their ID number or grade. 
+It might also have some methods such as printReportCard or printSchedule. 
+If the printSchedule method originally only printed out the student's classes, but you 
+change it so that it now also print out the student's information, you now have to change
+that entire Student class and all of the parameters to make it work. 
+
+This violates the open-closed principle because you are required to alter the Student
+class after it has been made. The way to fix this is with inheritance by making two new 
+classes, one for printReportCard and one for printSchedule that both inherit from the student 
+class. This follows the open-closed principle because now if you want to change something in 
+the printSchedule class, you do not have to change anything in the Student class because it is 
+closed for modification. Also, when you want to printReportCard, you no longer have to pass in 
+parameters that are specific only to the printSchedule method. 

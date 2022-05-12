@@ -1,0 +1,18 @@
+5. When you create a local variable, it is created on the *stack.* When you use the *new* keyword, the object you create is put on the *heap.* Whenever you use the *new* keyword, you need to use *delete* at some point, i.e.
+
+    ```cpp
+    Cat *c = new Cat();
+    ...
+    delete c;
+    ```
+
+    Why? Why do we *not* need to use *delete* when we create a local variable?
+
+Answer:
+Local variables are stored on the stack and when the function is over, the variable is pulled off of the stack. 
+It may not be deleted from memory but the stack pointer moves down to the next thing on the stack and 
+essentially just gets rid of the old variable that has already been used until something else is added back to it. 
+Since local variables are usually variables that we want to use to do one thing, we don't need to keep them after
+we are done using them so the stack just automatically gets rid of it once that has happened. Since the heap is where we allocate
+memory specifically to use objects or other things that we want to keep for a long time or use more than once, 
+we must tell the computer when we are done with it so that it can be removed by using the "delete" key word.

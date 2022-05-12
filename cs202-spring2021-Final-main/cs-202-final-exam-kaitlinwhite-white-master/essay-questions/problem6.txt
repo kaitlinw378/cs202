@@ -1,0 +1,33 @@
+6. What fundamental concept in object orientation is violated
+by making all class attributes public?
+How would you explain to a new developer
+why this concept is not one that they should ignore?
+
+Answer:
+The fundamental concept of object orientation that is violated
+by making all class attributes public is encapsulation. To explain this to a new 
+developer I would ask them to consider their personal information, for example. 
+Say that all of this information is stored in public attributes. Then consider the 
+case that they wish to buy something online and need to put their home address 
+in for shipping. If that information is public however the company can't just
+call for the address and use it, they have to go find the address and enter 
+it themselves. Since the address is a public attribute, it can be easily changed 
+by anyone. Now consider what happens if they make a mistake and enter the wrong 
+house numbers? You don't get your package. This is a situation most people would
+want to avoid and the same thing goes in object oriented programming. public class
+attributes can easily be altered by other places and if one of them gets changed it can cause many
+errors throughout the program and it may be difficult to find where the error 
+occured. 
+
+Now consider that all of the personal information is stored in private attributes instead. 
+The company can now just call for the already existing adress and use it without
+finding the information and entering it themselves. This also means that they cannot
+change the address because it is a private thing and they can only view and use it. 
+Now you get your package without error and everyone is happy. In object oriented programming, 
+keeping attributes private ensures that those attributes can only be viewed or used by other
+places in your program and cannot be changed. This prevents the data types 
+from being altered or stored as something that cannot be used by other methods that require 
+them meaning that it will be less likely for incompatible type errors to occure. If 
+however there does happen to be a problem, and if the attributes were private it will be easy to 
+find them because the only thing that can alter the private attributes is the class they belong to, 
+which is exactly why encapsulation should not be ignored.

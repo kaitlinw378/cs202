@@ -1,0 +1,24 @@
+Explain the difference between runtime and compile time polymorphism.
+How are these types of polymorphism implemented in C++?
+
+Answer:
+
+The difference between runtime and compile time polymorphism is that
+runtime polymorphism is run through inheritance meaning that objects are 
+being used to implement functions and compile time polymorphism is run through 
+templates meaning that type names are used to implement functions. 
+
+runtime polymorphism is implemented in C++ through inheritance and 
+happens through virtual functions and it follows the Liskov 
+substitution principle. This means that a subclass can be substituted
+for a parent class and it is still able to run. However, this cannot
+occur if the parent class is substituted for a subclass because the 
+subclasses often have more attributes or functions that can't be 
+used in this way. 
+
+compile time polymorphism in C++ is implemented through templates. 
+This means that the compiler substitutes a type for a placeholder
+and then creates the function after compiling. It creates a compiled
+version of the code which doesn't appear in the source code because it goes 
+away at compile time. The function is created in the compiled code based 
+on the types that are either explicitly given or inferred from a call.

@@ -1,0 +1,24 @@
+In addition to SOLID, we discussed the concept of primitive obsession. Explain this concept,
+and provide an example where you would follow the concept to change an interface.
+
+Answer: 
+Primitive obsession is the concept that relates to relying too much on or passing around primitive data
+types like int, strings, shorts, etc instead of using objects. The problem with using primitive data types
+is that it leaves room for performing "illegal" operations to them. Essentially this means for example
+say you have a string that is supposed to represent an ID, and you have other methods,etc that need
+to maybe need to add information to a system using that ID. If you were to just use the ID as 
+a string, that opens possibilities for changing it to upper/lower case or performing other string operations
+that should not be allowed. An ID represents one thing and altering it in this way means it no longer
+represents what it originally was supposed to perhaps it could now represent an entirely different person. 
+Now say the ID is stored as an int. The problem with this is that ints can be added, subtracted, etc which
+results in entirely different values. You would not want to be able to add or subtract something to an 
+ID number because it wouldnt be the ID number anymore. 
+
+Creating an ID class could correct this problem. Now, in the addInformation() method, you could just pass 
+in an ID type instead of a string or int. Doing this eliminates the need to validate the input because the validation
+is already done inside the class. It also prevents someone from trying to perform an illegal operation on the
+input because it is an ID object and can no longer be altered/interpreted as anything but that. Now you can 
+do whatever you need to do with the ID in the ID class because the other methods do not need to know about the
+specific aspects of how the ID is made, etc other than that it is a correct and valid ID they can use. The 
+result is more interfaces that perform a small amount of specific things (refactoring) but it provides safeties
+that can prevent from validation errors or using incorrect data types for a specific object.

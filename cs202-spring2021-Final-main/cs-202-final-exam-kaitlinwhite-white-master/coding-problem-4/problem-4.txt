@@ -1,0 +1,15 @@
+Assume that you are asked to add a run method to all Animals in the example in Problem 2 above.
+Which approach - inheritance or dependency inversion with injection
+would be easier for you to extend with the new functionality?
+Justify your answer by discussing what you would need to to in each case.
+You do not need to write code for this question.
+
+Answer:
+It would be easier to use inheritance in this case because the implementation
+of the run method will not change. Also, since the method is being applied 
+to all Animals, it infers that it means the Animal class. By making a virtual
+run method in the Animal class, the other classes can use this to accomplish 
+the run task since they inherit from the Animal class. This will be easier to accomplish 
+because everything else already uses the inheritance so the run method simply needs
+to be called for the individual animals to work instead of creating a whole new 
+interface to use the dependency inversion. 

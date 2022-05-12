@@ -1,0 +1,35 @@
+Review the code below.
+
+float recursive(float n){
+    static int iter = 0;
+    std::cout << iter++ << std::endl;
+    if(n == 1){
+        return 1.0;
+    } else {
+        return n * recursive(n / 2);
+    }
+}
+
+
+This code works for some values of n, but in other cases it runs
+for a long time and generates a segmentation fault.
+How could you modify this code so that it works for all numbers?
+
+Answer:
+To make this function work for all numbers you could modify
+the code as:
+
+float recursive(float n){
+    static int iter = 0;
+    std::cout << iter++  << std::endl;
+    if(n <= 1){
+        return 1.0;
+    }else{
+        return n * recursive(n/2);
+        
+    }
+}
+
+By changing the condition in the if statement to be (n<=1) no
+segmentation fault occurs because it can stop at decimals that are
+less than one such as 0.5.
