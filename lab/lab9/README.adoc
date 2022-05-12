@@ -1,0 +1,39 @@
+= Lab 9 - Abstract Base Classes
+
+== Overview
+In this assignment, you will create an inheritance hierarchy for a game.
+_You are not given the exact attributes or methods to implement: it is up to you
+to come up with appropriate methods and attributes_.
+
+
+== Instructions
+
+You are creating a race game where there are two vehicle categories: cars and planes.
+
+1. List the attributes and actions that you think would be required for each category.
+For example, a plane might need wing span as attribute and `bank()` as an action. You need
+to have _at least_ one attribute and one method that is unique to each category.
+
+2. Determine what attributes and actions are common between these items. You need
+to find _at least_ one attribute and one method that is common between the categories.
+
+3. Create a base class called `Vehicle` to contain these common attributes, and virtual abstract functions for the
+common actions. Include in your base class the abstract function `printDetails` that prints
+the name of the class and all of its attribute values. The format for the printing
+is up to you.
+
+4. Implement your base class and a class for each category. Each category must
+inherit from the base class and override all of the virtual abstract functions. In the category
+classes, implement the attributes and methods that are unique to that category.
+
+5. Create parameterized constructors for your category classes, and use initialization lists
+to initialize both the category class and the attributes stored in the base class.
+
+6. In your `main` function, create at least one object of each category _on the heap_ and add them
+to a `vector` that holds `Vehicle` pointers.
+
+7. Use a `for` loop to iterate over the `Vehicles`, calling the `printDetails` function
+on each vehicle in the vector.
+
+
+
